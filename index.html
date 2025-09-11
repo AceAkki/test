@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title> Test </title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- phosphor icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- magnific popup -->
+    <link rel='stylesheet' id='popup-css-css'
+        href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css?ver=1.1' media='all' />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <section>
+        <div class="hero-section">
+            <!-- https://www.figma.com/design/5L2dHEqykGT3oZsdeHs37V/PSD-Importer-for-Figma--Community-?node-id=0-1&t=DYCpiHF7nfjJRdiw-1 -->
+
+            <div class="hero-text-wrap">
+                <div class="hero-title">
+                    eScan Cyber Protection <br>
+                    That Moves With Your Family
+                </div>
+
+                <div class="hero-subtitle">
+                    Advanced Cybersecurity for Small Offices and Homes
+                </div>
+
+            </div>
+
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img src="img/slide-0.png" alt=""> </div>
+                    <div class="swiper-slide"> <img src="img/slide-1.png" alt=""> </div>
+                    <div class="swiper-slide"> <img src="img/slide-2.png" alt=""> </div>
+                </div>
+                <div class="swiper-pagination">
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="products-wrapper" id="productsList">
+                <div class="product-nav row">
+                    <div class="col-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#product-item-zero"
+                        aria-expanded="true" aria-controls="product-item-zero">
+                        Home and Small Office
+                    </div>
+                    <div class="col-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#product-item-one"
+                        aria-expanded="false" aria-controls="product-item-one">
+                        Small and Medium Business
+                    </div>
+                    <div class="col-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#product-item-two"
+                        aria-expanded="false" aria-controls="product-item-two">
+                        Enterprise
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row products-det-nav collapse show" id="product-item-zero"
+                        data-bs-parent="#productsList">
+                        <div class="col-md-4 img-product"> <img src="img/prdct.png" alt=""></div>
+
+                        <div class="col-md-4 info-product">
+                            <div class="info-wrap">
+
+                                <select class="form-select" aria-label="Select Product">
+                                    <option>Open this select menu</option>
+                                    <option value="1" selected> eScan Total Security Suite with Cloud Security</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+
+                                <div class="info-points">
+                                    <div class="info-point row">
+                                        <div class="col-1 d-flex align-items-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11"> Comprehensive Protection against Network-based Attacks
+                                        </div>
+                                    </div>
+                                    <div class="info-point row">
+                                        <div class="col-1 d-flex align-items-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11">
+                                            Low Memory Intensive Process for PC
+                                        </div>
+                                    </div>
+                                    <div class="info-point row">
+                                        <div class="col-1 d-flex align-items-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11">
+                                            Block Notifications & Alerts while Playing Favorite Games
+                                        </div>
+                                    </div>
+                                    <div class="info-point row">
+                                        <div class="col-1 d-flex align-items-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11">
+                                            Round-the-Clock Expert Support
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row-reverse">
+                                <div class="product-btn">
+                                    Know more
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="price-wrap">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-6">
+                                        <div class="title-box">
+                                            User
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="title-box">
+                                            Years
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-2 my-3">
+                                    <div class="col-md-6 d-flex align-items-center justify-content-center gap-2"
+                                        id="user-count">
+                                        <i class="ph ph-minus"></i>
+                                        <div class="display-num"> 1</div> <i class="ph ph-plus"></i>
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center justify-content-center gap-2"
+                                        id="year-count">
+                                        <i class="ph ph-minus"></i>
+                                        <div class="display-num"> 1</div> <i class="ph ph-plus"></i>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="price-result d-flex flex-column align-items-center justify-content-center align-self-center">
+                                    <p> RS.</p>
+                                    <p> 2500.00</p>
+                                </div>
+                                <div class="row row-cols-2 my-5">
+                                    <div class="col-md-6">
+                                        <div class="button-box">
+                                            Free Trial
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="button-box">
+                                            Buy Now
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row products-det-nav collapse" id="product-item-one" data-bs-parent="#productsList">
+                        <div class="col-md-4 img-product"> <img src="img/prdct.png" alt=""></div>
+
+                        <div class="col-md-4 info-product">
+                            <div class="info-wrap">
+                                <p>Enterprise 1</p>
+                                <select class="form-select" aria-label="Select Product">
+                                    <option>Open this select menu</option>
+                                    <option value="1" selected> eScan Total Security Suite with Cloud Security</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+
+                                <div class="info-points">
+                                    <div class="info-point row">
+                                        <div class="col-1 align-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11"> Comprehensive Protection against Network-based Attacks
+                                        </div>
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Low Memory Intensive Process for PC
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Block Notifications & Alerts while Playing Favorite Games
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Round-the-Clock Expert Support
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-btn">
+                                Know more
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+
+                        </div>
+                    </div>
+                    <div class="row products-det-nav collapse" id="product-item-two" data-bs-parent="#productsList">
+                        <div class="col-md-4 img-product"> <img src="img/prdct.png" alt=""></div>
+
+                        <div class="col-md-4 info-product">
+                            <div class="info-wrap">
+                                <p>Enterprise</p>
+                                <select class="form-select" aria-label="Select Product">
+                                    <option>Open this select menu</option>
+                                    <option value="1" selected> eScan Total Security Suite with Cloud Security</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+
+                                <div class="info-points">
+                                    <div class="info-point row">
+                                        <div class="col-1 align-center">
+                                            &#10004;
+                                        </div>
+                                        <div class="col-11"> Comprehensive Protection against Network-based Attacks
+                                        </div>
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Low Memory Intensive Process for PC
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Block Notifications & Alerts while Playing Favorite Games
+                                    </div>
+                                    <div class="info-point">
+                                        &#10004; Round-the-Clock Expert Support
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-btn">
+                                Know more
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="testimonials-main-wrapper">
+                <div class="header-wrapper">
+                    <h3>
+                        Customers Speak
+                    </h3>
+
+                    <div class="line">
+                    </div>
+                </div>
+
+                <div class="testimonials-wrapper">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <img src="img/symbol.png" alt="">
+                        </div>
+                        <div class="col-md-11 testi-text">
+                            Dear Sir,
+                            Thanks for your support. My problem has been solved by one of your engineers by taking
+                            remote connection of my pc. Thank you again for such a quick support.
+                        </div>
+                        <div class="testi-wrap">
+                            <span class="testi-name">
+                                PUSHKAR RANADIVE
+                            </span>
+                            - MUMBAI INDIA
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <img src="img/symbol.png" alt="">
+                        </div>
+                        <div class="col-md-11 testi-text">
+                            Good service with remote support and phone.
+                        </div>
+                        <div class="testi-wrap">
+                            <span class="testi-name">
+                                BHARAT WAGHELA
+                            </span>
+                            - MUMBAI INDIA
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <img src="img/symbol.png" alt="">
+                        </div>
+                        <div class="col-md-11 testi-text">
+                            I have to particularly appreciate the quality of response from your technical support team.
+                            The representative who resolved my issue, his understanding of the issue was quick and
+                            comprehensive. He went out of his way to try and solve the issue. I truly appreciate the
+                            call-back in response to email that I have sent and the professionalism with which the eScan
+                            representative tackled the issue. His response has strengthened my faith in eScan.
+                        </div>
+                        <div class="testi-wrap">
+                            <span class="testi-name">
+                                M FRANK
+                            </span>
+                            - MUMBAI INDIA
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <img src="img/symbol.png" alt="">
+                        </div>
+                        <div class="col-md-11 testi-text">
+                            eScanAV Anti-Virus Toolkit (MWAV) is the best I have ever seen and used among all the
+                            antivirus available in the market.
+                        </div>
+                        <div class="testi-wrap">
+                            <span class="testi-name">
+                                MONTY, RESTAURANT MANAGER, KEBABS N MORE
+                            </span>
+                            - HYDERABAD, INDIA
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="social-logos-wrapper">
+                <div class="header-wrapper">
+                    <h3>
+                        Stay in touch
+                    </h3>
+
+                    <div class="line">
+                    </div>
+                </div>
+
+                <div class="logos-wrapper d-flex align-items-center justify-content-center gap-5 my-5">
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                    <div class="logos-main facebook">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- aos JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <!-- magnific popup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?ver=1.1"
+        id="popup-js-js"></script>
+
+
+    <script src="js/index.js">
+    </script>
+</body>
+
+</html>

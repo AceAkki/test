@@ -1,0 +1,47 @@
+{
+  "home": {
+    "products": [
+      {"name": "eScan Anti-Virus for Home Users", "price_inr": 799},
+      {"name": "eScan Internet Security Suite", "price_inr": 1049},
+      {"name": "eScan Total Security Suite", "price_inr": 1349},
+      {"name": "eScan Anti-Virus for Mac", "price_inr": 1199},
+      {"name": "eScan Universal Security Suite (Multi-device)", "price_inr": 1499}
+    ],
+    "features": [
+      "Content Security and Parental Control",
+      "Web Phishing Filter",
+      "Virtual Keyboard",
+      "Folder & Files Security"
+    ]
+  },
+  "business": {
+    "products": [
+      {"name": "eScan Anti-Virus for Small Business", "price_inr": 1999},
+      {"name": "eScan Internet Security Suite for Business", "price_inr": 2499},
+      {"name": "eScan Endpoint Security (with Hybrid Network Support)", "price_inr": 3899},
+      {"name": "eScan Management Console (EMC)", "price_inr": 2999},
+      {"name": "eScan Anti-Virus for File Servers", "price_inr": 4499}
+    ],
+    "features": [
+      "Anti-Ransomware via Proactive Behavioral Analysis Engine (PBAE)",
+      "Application Control",
+      "Web Security / Web Filtering",
+      "Custom / Flexible Reporting"
+    ]
+  },
+  "enterprise": {
+    "products": [
+      {"name": "eScan Corporate Edition", "price_inr": 5999},
+      {"name": "eScan Enterprise Edition with MDM & Hybrid Network Support", "price_inr": 7499},
+      {"name": "eScan Enterprise EDR", "price_inr": 8999},
+      {"name": "eScan Content Security", "price_inr": 6699},
+      {"name": "eScan Two-Factor Authentication", "price_inr": 4999}
+    ],
+    "features": [
+      "Enterprise Mobility Management (EMM)",
+      "Centralized Management Console",
+      "MDM & Hybrid Network Support",
+      "Protection of Endpoints (USB/device control, blocking unauthorized apps)"
+    ]
+  }
+}
