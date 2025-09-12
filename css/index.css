@@ -61,8 +61,8 @@ img {
 img.brand-logo {
   min-width: 100px;
   max-width: 100px;
-  background:#fff;
-  padding:10px;
+  background: #fff;
+  padding: 10px;
 }
 
 .brand-bg {
@@ -314,7 +314,7 @@ img.brand-bg {
 
 .testi-wrap {
   max-width: fit-content;
-  margin: 0 1.5rem -2rem;
+  margin: 0 5.5rem -2rem;
   font-size: 1.1rem;
   background: var(--white-color);
 }
@@ -330,12 +330,18 @@ img.brand-bg {
 
 .logos-wrapper {
   padding: 1rem 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .logos-main {
   border-radius: 100%;
   border: 2px solid var(--nav-active);
   background: var(--nav-active);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 .logos-main img {
@@ -379,7 +385,7 @@ footer > .container-fluid {
 .main-det-wrap {
   display: flex;
   gap: 1rem;
-  position:relative;
+  position: relative;
 }
 
 .newsletter-wrap .form-wrap {
@@ -427,7 +433,7 @@ footer .title-wrap {
 }
 
 footer .list-wrap {
-  padding: 1rem 8rem;
+  padding: 1rem 2rem;
   margin: 0;
 }
 
@@ -440,8 +446,8 @@ footer .list-wrap {
   img.brand-logo {
     max-width: 100%;
     margin: -0.5rem 6rem;
-    background:none;
-    padding:0;
+    background: none;
+    padding: 0;
   }
 
   .brand-bg {
@@ -482,8 +488,21 @@ footer .list-wrap {
     min-width: 1rem;
   }
 
-.testi-wrap {
-  max-width: fit-content;
+  .testi-wrap {
+    max-width: fit-content;
     margin: 0 5.5rem -2rem;
   }
+
+  .logos-wrapper {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+
+  
+footer .list-wrap {
+  padding: 1rem 8rem;
+}
+
 }
