@@ -1,90 +1,88 @@
+import { ProductInfo } from "./classProductInfo.js"
+const classProduct = new ProductInfo({yearSelector: "year-count", userSelector:"user-count", minusBtnClass:"ph-minus", plusBtnClass:"ph-plus", displayElmClass:"display-num"});
+
 document.addEventListener("DOMContentLoaded", async () => {
-    let headerElm = document.querySelector("#header");
-    let header = await fetchFile("header.html", "Failed to load header!");
-    headerElm.innerHTML = header;
-    let footerElm = document.querySelector("#footer");
-    let footer = await fetchFile("footer.html", "Failed to load footer!");
-    footerElm.innerHTML = footer;
+  let headerElm = document.querySelector("#header");
+  let header = await fetchFile("header.html", "Failed to load header!", "text");
+  headerElm.innerHTML = header;
+  let footerElm = document.querySelector("#footer");
+  let footer = await fetchFile("footer.html", "Failed to load footer!", "text");
+  footerElm.innerHTML = footer;
 
-    const swiper = new Swiper('.swiper', {
-        loop:true,
-        pagination:{
-            el: '.swiper-pagination'
-        },
-        navigation: {
-            nextEl:'.swiper-button-next',
-            prevEl:'.swiper-button-prev',
-        }
-    })
+  let productsData = await fetchFile("json/products.json", "JSON");
+  let homeProducts = document.querySelector("#product-item-zero");
+  let businessProducts = document.querySelector("#product-item-one");
+  let enterpriseProducts = document.querySelector("#product-item-two");
 
-    let productNav = document.querySelector(".product-nav");
+  classProduct.poppulate(homeProducts, productsData["home"]["products"], productsData["home"]["features"])
+  classProduct.poppulate(businessProducts, productsData["business"]["products"], productsData["business"]["features"])
+  classProduct.poppulate(enterpriseProducts, productsData["enterprise"]["products"], productsData["enterprise"]["features"])
 
-    productNav.addEventListener("click", (e)=> {
-      if (e.target.classList.contains("col-md-4")) {
-        Array.from(productNav.children).forEach(child => { child.classList.remove("active-nav") });
-        e.target.classList.add("active-nav")
-      }
-    })
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  })
 
-    Array.from(productNav.children).forEach(child => {
-      if (child.getAttribute("aria-expanded") === "true") {
-        child.classList.add("active-nav")
-      } else {
+  let productNav = document.querySelector(".product-nav");
+
+  productNav.addEventListener("click", (e)=> {
+    if (e.target.classList.contains("col-md-4")) {
+      Array.from(productNav.children).forEach(child => {
         child.classList.remove("active-nav")
-      }
-    })
-    
-    countCalculator ({
-      idSelector: "user-count", 
-      minusBtnClass: "ph-minus", 
-      plusBtnClass: "ph-plus", 
-      displayElmClass: "display-num"}
-      )
-    countCalculator ({
-      idSelector: "year-count", 
-      minusBtnClass: "ph-minus", 
-      plusBtnClass: "ph-plus", 
-      displayElmClass: "display-num"}
-      )
+      });
+      e.target.classList.add("active-nav")
+    }
+  })
+
+  Array.from(productNav.children).forEach(child => {
+    if (child.getAttribute("aria-expanded") === "true") {
+      child.classList.add("active-nav")
+    } else {
+      child.classList.remove("active-nav")
+    }
+  })
+
+  // countCalculator ( {
+  //   idSelector: "user-count",
+  //   minusBtnClass: "ph-minus",
+  //   plusBtnClass: "ph-plus",
+  //   displayElmClass: "display-num"
+  // }
+  // )
+  // countCalculator ( {
+  //   idSelector: "year-count",
+  //   minusBtnClass: "ph-minus",
+  //   plusBtnClass: "ph-plus",
+  //   displayElmClass: "display-num"
+  // }
+  // )
 
 
 
 })
 
-async function fetchFile(apiURL, errorMessage) {
-    try {
-      const response = await fetch(apiURL);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
+async function fetchFile(apiURL, errorMessage, type) {
+  try {
+    const response = await fetch(apiURL);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    if (type === "text") {
       const data = await response.text();
       return data;
-    } catch (error) {
-      console.error(errorMessage, error);
+    } else {
+      const data = await response.json();
+      return data;
     }
+  } catch (error) {
+    console.error(errorMessage, error);
+  }
 }
 
-function countCalculator ({idSelector, minusBtnClass, plusBtnClass, displayElmClass}) {
-  let parentElm = document.getElementById(idSelector);
-  let minusBtn = parentElm.getElementsByClassName(minusBtnClass)[0];
-  let plusBtn = parentElm.getElementsByClassName(plusBtnClass)[0];
-  let displayElm = parentElm.getElementsByClassName(displayElmClass)[0];
-  
-  let count = 1;
-  minusBtn.addEventListener("click", ()=> {
-    if (count > 1) {
-      count -= 1;
-      displayElm.textContent = count;
-    }
-  })
-  
-  plusBtn.addEventListener("click", ()=> {
-    if (count < 10) {
-      count += 1;
-      displayElm.textContent = count;
-    }
-  })
 
-
-
-}
