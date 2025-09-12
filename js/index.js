@@ -1,5 +1,9 @@
 import { ProductInfo } from "./classProductInfo.js"
-const classProduct = new ProductInfo({yearSelector: "year-count", userSelector:"user-count", minusBtnClass:"ph-minus", plusBtnClass:"ph-plus", displayElmClass:"display-num"});
+const classProduct = new ProductInfo({
+  yearSelector: "year-count", 
+  userSelector:"user-count", 
+  minusBtnClass:"ph-minus", plusBtnClass:"ph-plus", 
+  displayElmClass:"display-num"});
 
 document.addEventListener("DOMContentLoaded", async () => {
   let headerElm = document.querySelector("#header");
@@ -8,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let footerElm = document.querySelector("#footer");
   let footer = await fetchFile("footer.html", "Failed to load footer!", "text");
   footerElm.innerHTML = footer;
+  
 
   let productsData = await fetchFile("json/products.json", "JSON");
   let homeProducts = document.querySelector("#product-item-zero");
@@ -47,22 +52,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       child.classList.remove("active-nav")
     }
   })
-
-  // countCalculator ( {
-  //   idSelector: "user-count",
-  //   minusBtnClass: "ph-minus",
-  //   plusBtnClass: "ph-plus",
-  //   displayElmClass: "display-num"
-  // }
-  // )
-  // countCalculator ( {
-  //   idSelector: "year-count",
-  //   minusBtnClass: "ph-minus",
-  //   plusBtnClass: "ph-plus",
-  //   displayElmClass: "display-num"
-  // }
-  // )
-
 
 
 })
