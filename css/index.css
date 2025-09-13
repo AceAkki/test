@@ -8,6 +8,8 @@
   --product-info-bg: #d2d3d5;
   --footer-bg: #e7e8e9;
   --white-color: #fff;
+
+  --current-pos: 0;
 }
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
@@ -437,6 +439,25 @@ footer .list-wrap {
   margin: 0;
 }
 
+.popup-screen {
+  background: rgba(255, 255, 255, 0.9);
+  /* backdrop-filter: blur(20px);
+  border:1px solid rgba(255, 255, 255, 0.5); */
+  padding:3rem;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.close-btn {
+  float:right;
+  margin: -2rem;
+}
+
 @media screen and (min-width: 1080px) {
   .brand-logo {
     position: absolute;
@@ -457,6 +478,11 @@ footer .list-wrap {
   .swiper-wrapper {
     min-height: 80vh;
     max-height: 80vh;
+  }
+
+  .hero-section {
+    height: max(80vh, 700px);
+    position: relative;
   }
 
   .hero-text-wrap {
@@ -500,9 +526,7 @@ footer .list-wrap {
     justify-content: center;
   }
 
-  
-footer .list-wrap {
-  padding: 1rem 8rem;
-}
-
+  footer .list-wrap {
+    padding: 1rem 8rem;
+  }
 }
