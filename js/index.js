@@ -1,9 +1,10 @@
 import { ProductInfo } from "./classProductInfo.js"
 const classProduct = new ProductInfo({
-  yearSelector: "year-count", 
-  userSelector:"user-count", 
+  yearClass: "year-count", 
+  userClass:"user-count", 
   minusBtnClass:"ph-minus", plusBtnClass:"ph-plus", 
-  displayElmClass:"display-num"});
+  displayElmClass:"display-num", 
+  buttonClass: "button-box"});
 
 document.addEventListener("DOMContentLoaded", async () => {
   let headerElm = document.querySelector("#header");
